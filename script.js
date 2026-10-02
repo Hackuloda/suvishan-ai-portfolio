@@ -187,7 +187,7 @@ const facebookButton=document.querySelector('.hero-facebook');
 if(facebookButton&&!document.querySelector('.hero-line')){
   const lineButton=document.createElement('a');
   lineButton.className='hero-social hero-line';
-  lineButton.href='https://line.me/ti/p/@auzafreedom';
+  lineButton.href='https://line.me/ti/p/~auzafreedom';
   lineButton.target='_blank';
   lineButton.rel='noreferrer';
   lineButton.setAttribute('aria-label','Add Suvishan on LINE');
