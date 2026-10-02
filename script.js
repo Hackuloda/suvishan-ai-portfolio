@@ -183,6 +183,18 @@ document.querySelectorAll('.certificate-card').forEach(card=>{
   card.append(icon);
 });
 
+const facebookButton=document.querySelector('.hero-facebook');
+if(facebookButton&&!document.querySelector('.hero-line')){
+  const lineButton=document.createElement('a');
+  lineButton.className='hero-social hero-line';
+  lineButton.href='https://line.me/ti/p/@auzafreedom';
+  lineButton.target='_blank';
+  lineButton.rel='noreferrer';
+  lineButton.setAttribute('aria-label','Add Suvishan on LINE');
+  lineButton.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 10.3C24 4.62 18.62 0 12 0S0 4.62 0 10.3c0 5.1 4.53 9.37 10.65 10.18.41.09.98.28 1.12.64.13.33.09.85.04 1.19l-.18 1.12c-.05.33-.26 1.29 1.13.7 1.39-.58 7.5-4.42 10.23-7.56C23.93 14.91 24 12.92 24 10.3ZM7.32 13.68H4.94a.63.63 0 0 1-.63-.63V8.27a.63.63 0 1 1 1.26 0v4.15h1.75a.63.63 0 1 1 0 1.26Zm2.47-.63a.63.63 0 1 1-1.26 0V8.27a.63.63 0 1 1 1.26 0v4.78Zm5.74 0a.63.63 0 0 1-1.12.4l-2.45-3.32v2.92a.63.63 0 1 1-1.26 0V8.27a.63.63 0 0 1 1.13-.38l2.44 3.31V8.27a.63.63 0 1 1 1.26 0v4.78Zm3.87-3.02a.63.63 0 1 1 0 1.26h-1.75v1.13h1.75a.63.63 0 1 1 0 1.26h-2.38a.63.63 0 0 1-.63-.63V8.27c0-.35.28-.63.63-.63h2.38a.63.63 0 1 1 0 1.26h-1.75v1.13h1.75Z"/></svg><span>LINE</span>';
+  facebookButton.after(lineButton);
+}
+
 const radarTargets=[...new Set(document.querySelectorAll('a,button,.card,.job,.skill-row,.stat-item,.education-item,.certificate-card,.contact-item'))];
 radarTargets.forEach(target=>{
   if(target.querySelector(':scope > .global-radar'))return;
